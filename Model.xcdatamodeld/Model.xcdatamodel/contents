@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16D17a" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Casting" representedClassName="Casting" syncable="YES" codeGenerationType="class">
+        <attribute name="designer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="versions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Version" inverseName="casting" inverseEntity="Version" syncable="YES"/>
+    </entity>
+    <entity name="Version" representedClassName="Version" syncable="YES" codeGenerationType="class">
+        <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="images" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="casting" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Casting" inverseName="versions" inverseEntity="Casting" syncable="YES"/>
+        <relationship name="wheelType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WheelType" inverseName="cars" inverseEntity="WheelType" syncable="YES"/>
+    </entity>
+    <entity name="WheelType" representedClassName="WheelType" syncable="YES" codeGenerationType="class">
+        <attribute name="images" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cars" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Version" inverseName="wheelType" inverseEntity="Version" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Casting" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Version" positionX="-54" positionY="9" width="128" height="120"/>
+        <element name="WheelType" positionX="-36" positionY="36" width="128" height="90"/>
+    </elements>
+</model>
