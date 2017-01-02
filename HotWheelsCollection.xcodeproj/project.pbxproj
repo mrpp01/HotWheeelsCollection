@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF055BAB1E19EAF400DF5C74 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = CF055BAA1E19EAF400DF5C74 /* data.json */; };
+		CF055BAD1E19EBD500DF5C74 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF055BAC1E19EBD500DF5C74 /* CoreDataStack.swift */; };
 		CFD95F001E13BCF6002D4120 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD95EFF1E13BCF6002D4120 /* AppDelegate.swift */; };
 		CFD95F021E13BCF6002D4120 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD95F011E13BCF6002D4120 /* ViewController.swift */; };
 		CFD95F051E13BCF6002D4120 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFD95F031E13BCF6002D4120 /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF055BAA1E19EAF400DF5C74 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = SOURCE_ROOT; };
+		CF055BAC1E19EBD500DF5C74 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = SOURCE_ROOT; };
 		CFD95EFC1E13BCF6002D4120 /* HotWheelsCollection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotWheelsCollection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFD95EFF1E13BCF6002D4120 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFD95F011E13BCF6002D4120 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,7 +62,9 @@
 			isa = PBXGroup;
 			children = (
 				CFD95EFF1E13BCF6002D4120 /* AppDelegate.swift */,
+				CF055BAC1E19EBD500DF5C74 /* CoreDataStack.swift */,
 				CFD95F011E13BCF6002D4120 /* ViewController.swift */,
+				CF055BAA1E19EAF400DF5C74 /* data.json */,
 				CFD95F031E13BCF6002D4120 /* Main.storyboard */,
 				CFD95F061E13BCF6002D4120 /* Assets.xcassets */,
 				CFD95F081E13BCF6002D4120 /* LaunchScreen.storyboard */,
@@ -130,6 +136,7 @@
 				CFD95F0A1E13BCF6002D4120 /* LaunchScreen.storyboard in Resources */,
 				CFD95F071E13BCF6002D4120 /* Assets.xcassets in Resources */,
 				CFD95F051E13BCF6002D4120 /* Main.storyboard in Resources */,
+				CF055BAB1E19EAF400DF5C74 /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +150,7 @@
 				CFD95F021E13BCF6002D4120 /* ViewController.swift in Sources */,
 				CFD95F001E13BCF6002D4120 /* AppDelegate.swift in Sources */,
 				CFD95F131E13BD08002D4120 /* Model.xcdatamodeld in Sources */,
+				CF055BAD1E19EBD500DF5C74 /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +314,7 @@
 				CFD95F101E13BCF6002D4120 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
