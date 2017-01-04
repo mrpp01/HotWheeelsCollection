@@ -41,6 +41,7 @@ class CoreDataStack {
     
     do {
       try managedContext.save()
+      print("Data saved")
     } catch let error as NSError {
       print("Unresolved error \(error), \(error.userInfo)")
     }

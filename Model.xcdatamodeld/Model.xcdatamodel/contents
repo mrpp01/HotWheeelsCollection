@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16D17a" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Casting" representedClassName="Casting" syncable="YES" codeGenerationType="class">
+    <entity name="Casting" representedClassName=".Casting" syncable="YES">
         <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="producedFrom" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -9,20 +9,21 @@
         <relationship name="manuafacturer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Manuafacturer" inverseName="castings" inverseEntity="Manuafacturer" syncable="YES"/>
         <relationship name="versions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Version" inverseName="casting" inverseEntity="Version" syncable="YES"/>
     </entity>
-    <entity name="Designer" representedClassName="Designer" syncable="YES" codeGenerationType="class">
+    <entity name="Designer" representedClassName=".Designer" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="castings" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Casting" inverseName="designer" inverseEntity="Casting" syncable="YES"/>
     </entity>
-    <entity name="Manuafacturer" representedClassName="Manuafacturer" syncable="YES" codeGenerationType="class">
+    <entity name="Manuafacturer" representedClassName=".Manuafacturer" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="castings" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Casting" inverseName="manuafacturer" inverseEntity="Casting" syncable="YES"/>
     </entity>
-    <entity name="Series" representedClassName="Series" syncable="YES" codeGenerationType="class">
+    <entity name="Series" representedClassName=".Series" syncable="YES">
         <attribute name="images" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="versions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Version" inverseName="year" inverseEntity="Version" syncable="YES"/>
         <relationship name="year" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Year" inverseName="series" inverseEntity="Year" syncable="YES"/>
     </entity>
-    <entity name="Version" representedClassName="Version" syncable="YES" codeGenerationType="class">
+    <entity name="Version" representedClassName=".Version" syncable="YES">
         <attribute name="colNumber" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="images" optional="YES" attributeType="Binary" syncable="YES"/>
@@ -30,13 +31,14 @@
         <attribute name="toyNumber" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="casting" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Casting" inverseName="versions" inverseEntity="Casting" syncable="YES"/>
         <relationship name="wheelType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WheelType" inverseName="cars" inverseEntity="WheelType" syncable="YES"/>
+        <relationship name="year" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Series" inverseName="versions" inverseEntity="Series" syncable="YES"/>
     </entity>
-    <entity name="WheelType" representedClassName="WheelType" syncable="YES" codeGenerationType="class">
+    <entity name="WheelType" representedClassName=".WheelType" syncable="YES">
         <attribute name="images" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="cars" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Version" inverseName="wheelType" inverseEntity="Version" syncable="YES"/>
     </entity>
-    <entity name="Year" representedClassName="Year" syncable="YES" codeGenerationType="class">
+    <entity name="Year" representedClassName=".Year" syncable="YES">
         <attribute name="name" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="series" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Series" inverseName="year" inverseEntity="Series" syncable="YES"/>
     </entity>
@@ -44,8 +46,8 @@
         <element name="Casting" positionX="-63" positionY="-18" width="128" height="150"/>
         <element name="Designer" positionX="-18" positionY="81" width="128" height="75"/>
         <element name="Manuafacturer" positionX="18" positionY="117" width="128" height="75"/>
-        <element name="Series" positionX="0" positionY="90" width="128" height="90"/>
-        <element name="Version" positionX="-54" positionY="9" width="128" height="150"/>
+        <element name="Series" positionX="0" positionY="90" width="128" height="105"/>
+        <element name="Version" positionX="-54" positionY="9" width="128" height="165"/>
         <element name="WheelType" positionX="-36" positionY="36" width="128" height="90"/>
         <element name="Year" positionX="-27" positionY="72" width="128" height="75"/>
     </elements>
